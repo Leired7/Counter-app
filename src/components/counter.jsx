@@ -2,11 +2,11 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 0
+    count: 0,
   };
 
   handleIncrement = () => {
-    console.log("Incremental click", this);
+    this.setState({ count: this.state.count + 1 });
   };
 
   render() {
@@ -17,7 +17,7 @@ class Counter extends Component {
           onClick={this.handleIncrement}
           className="btn btn-secondary btn-sm"
         >
-          Increment
+          Incr ement
         </button>
       </React.Fragment>
     );
